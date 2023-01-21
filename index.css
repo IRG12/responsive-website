@@ -7,4 +7,78 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-img {
+  height: 110px;
+  width: 110px;
+}
+
+.nav-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.nav-left div:nth-child(2) {
+  font-size: 25px;
+  color: rgba(169, 169, 169);
+}
+
+.nav-right {
+  display: flex;
+  width: 250px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-right div a {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(169, 169, 169);
+}
+
+.nav-right div a:hover {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(110, 110, 110);
+}
+
+.main1 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.about div h1 {
+  font-size: 50px;
+}
+
+.about .child {
+  padding: 10px;
+}
+
+.product {
+  padding: 100px 0px;
 }

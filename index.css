@@ -326,8 +326,23 @@ footer img {
 }
 
 @media (max-width: 1047px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   nav {
     width: 750px;
+  }
+
+  .nav-left {
+    position: relative;
+    bottom: 0;
+  }
+
+  .nav-right {
+    position: relative;
+    bottom: 0;
   }
 
   .main1-container {
@@ -335,7 +350,9 @@ footer img {
   }
 
   .main1-container .about {
-    width: 750px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .main2-container {
@@ -382,17 +399,39 @@ footer img {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  body a {
+    visibility: hidden;
+  }
+
   nav {
     width: 600px;
   }
 
+  .nav-right {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 130px;
+    opacity: 0.5;
+  }
+
   .main1-container {
-    width: 600px;
+    width: 100%;
   }
 
   .main1-container .about {
     width: 650px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .product {
@@ -405,15 +444,16 @@ footer img {
   }
 
   .product-card {
-    max-width: 600px;
+    max-width: 100%;
+    padding: 20px 0px;
   }
 
   .product-card img {
-    height: 500px;
+    height: 600px;
   }
 
   .main2-container {
-    width: 600px;
+    width: 100%;
   }
 
   .main2-container .main2-top-parent {
@@ -425,26 +465,30 @@ footer img {
     flex-direction: column;
     padding: 100px 0px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
 
   .profile-card {
-    max-width: 600px;
+    width: 100%;
+    padding: 0px;
   }
 
-  .profile-card .profile-img {
-    width: 500px;
+  .profile-card:nth-child(odd) {
+    padding: 0px;
   }
 
   .profile-img img {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 750px;
+    object-fit: cover;
   }
 
   footer {
-    height: 550px;
-    width: 600px;
+    height: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-mid-container {
@@ -465,9 +509,19 @@ footer img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   body a {
     visibility: hidden;
+  }
+
+  nav {
+    width: 300px;
+    padding-bottom: 25px;
   }
 
   .nav-right {
@@ -477,11 +531,123 @@ footer img {
     height: 30px;
     width: 30px;
     position: relative;
-    right: 25px;
-    bottom: 40px;
+    left: 50px;
     opacity: 0.5;
   }
-}
 
-@media (max-width: 375px) {
+  .main1-container {
+    width: 50%;
+  }
+
+  .main1-container .about {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about .child h1 {
+    font-size: 40px;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-card {
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .product-card h3,
+  p {
+    text-align: center;
+    width: 330px;
+    position: relative;
+    left: 10px;
+  }
+
+  .product-card img {
+    height: 300px;
+    width: 370px;
+  }
+
+  .main2-container {
+    width: 50%;
+  }
+
+  .main2-container .main2-top-parent {
+    width: 330px;
+  }
+
+  .main2-bottom-parent {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .profile-card {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .profile-card:nth-child(odd) {
+    padding: 0px;
+  }
+
+  .profile-img img {
+    height: 300px;
+    width: 370px;
+    object-fit: cover;
+  }
+
+  footer {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-top-container-cell:nth-child(2) {
+    position: relative;
+    left: 8px;
+  }
+
+  .footer-top-container {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 90px;
+  }
+
+  .footer-mid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 370px;
+    text-align: center;
+  }
+
+  .address div {
+    padding-bottom: 10px;
+  }
+
+  .div-line-dark {
+    position: relative;
+    top: 15px;
+  }
 }
